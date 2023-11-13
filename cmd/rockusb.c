@@ -168,10 +168,10 @@ static int do_rkusb(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
 	devtype = argv[2];
 	devnum	= argv[3];
 
-	if (!strcmp(devtype, "mmc") && !strcmp(devnum, "1")) {
+/*	if (!strcmp(devtype, "mmc") && !strcmp(devnum, "1")) {
 		pr_err("Forbid to flash mmc 1(sdcard)\n");
 		return CMD_RET_FAILURE;
-	} else if (!strcmp(devtype, "nvme") && !strcmp(devnum, "0")) {
+	} else*/ if (!strcmp(devtype, "nvme") && !strcmp(devnum, "0")) {
 		/*
 		 * Add partnum ":0" to active 'allow_whole_dev' partition
 		 * search mechanism on multi storage, where there maybe not
